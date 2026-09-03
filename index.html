@@ -25,8 +25,20 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.2;bac
 <a class="button primary" href="https://github.com/Christianfwb" target="_blank" rel="noreferrer"><span>View my GitHub</span><span class="arrow">↗</span></a>
 <a class="button secondary" href="https://github.com/Christianfwb/universal-time-solver" target="_blank" rel="noreferrer"><span><strong>Universal Time Solver</strong><span class="sub">Explore the repository</span></span><span class="arrow">↗</span></a>
 </div>
-<div class="qrbox"><img src="agentic-summit-qr.png" alt="QR code for this digital business card"><div><strong>Scan to connect</strong><span>Open this card and my GitHub links on another device.</span></div></div><p class="thanks">Thank you for connecting with me at the Agentic Summit.</p>
+<a class="button secondary" href="tel:+497065291338"><span><strong>Call Christian</strong><span class="sub">+49 7065 291338</span></span><span class="arrow">☎</span></a>
+<a class="button secondary" href="christian-berrang.vcf" download><span><strong>Save contact</strong><span class="sub">Add Christian to your phone</span></span><span class="arrow">＋</span></a>
+<button class="button secondary share" id="share-card" type="button"><span><strong>Share this card</strong><span class="sub">Send the link to someone</span></span><span class="arrow">↗</span></button><div class="qrbox"><img src="agentic-summit-qr.png" alt="QR code for this digital business card"><div><strong>Scan to connect</strong><span>Open this card and my GitHub links on another device.</span></div></div><p class="thanks">Thank you for connecting with me at the Agentic Summit.</p>
 </section>
 </main>
-</body>
+<script>
+const shareButton=document.getElementById('share-card');
+shareButton.addEventListener('click',async()=>{
+ const data={title:'Christian Berrang',text:'Connect with Christian Berrang',url:location.href};
+ if(navigator.share){try{await navigator.share(data);return}catch(error){if(error.name==='AbortError')return}}
+ await navigator.clipboard.writeText(location.href);
+ const old=shareButton.querySelector('strong').textContent;
+ shareButton.querySelector('strong').textContent='Link copied';
+ setTimeout(()=>shareButton.querySelector('strong').textContent=old,1800);
+});
+</script></body>
 </html>
