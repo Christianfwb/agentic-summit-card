@@ -2,10 +2,14 @@ BEGIN:VCARD
 VERSION:3.0
 N:Berrang;Christian;;;
 FN:Christian Berrang
-ORG:Team Frequency Law
+ORG:Team Frequency Law;CARA-UTM Architecture
 TITLE:Independent Researcher & Systems Architect
-TEL;TYPE=CELL:+497065291338
-EMAIL:Christianfwb@gmail.com
-URL:https://github.com/Christianfwb
-NOTE:Independent researcher and systems architect
+ROLE:Quantum Architecture & Resonant Computing
+TEL;TYPE=CELL,VOICE:+497065291338
+EMAIL;TYPE=INTERNET,PREF:Christianfwb@gmail.com
+ADR;TYPE=WORK:;;;Hakuba;Nagano;;Japan
+URL;TYPE=GitHub:https://github.com/Christianfwb
+URL;TYPE=Repository:https://github.com/Christianfwb/universal-time-solver
+NOTE:Independent Researcher & Systems Architect. XPRIZE Quantum Applications Challenge Wild Card (Preliminary Stage). Focus: Phase-based synchronization, CARA-UTM & collapsing gate complexity O(n²) -> O(n).
+REV:2026-09-07T09:18:00Z
 END:VCARD
